@@ -6,5 +6,4 @@ export default function PageContent (){
             <OptionsContainer />
         </div>
     ) 
-
 }
