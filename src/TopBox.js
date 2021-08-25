@@ -1,14 +1,9 @@
 
-export default function TopBox (){
-    let restaurantsInfo = {
-        name: "DrivenEats",
-        slogan: "Sua comida em 6 minutos"
-    }
-    
+export default function TopBox (props){
     return(
-        <div class="top-box">
-        <p class="nome-restaurante">{restaurantsInfo.name}</p>
-        <p class="slogan">{restaurantsInfo.slogan}</p>
+        <div className = "top-box">
+        <p className = "nome-restaurante">{props.restaurantsName}</p>
+        <p className = "slogan">{props.slogan}</p>
     </div>
     )
 }
