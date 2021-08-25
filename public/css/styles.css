@@ -1,0 +1,237 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #e5e5e5;
+    width: 100vw;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+.top-box{
+    height: 92px;
+    width: 100vw;
+    background-color: #CF2B2B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nome-restaurante {
+    font-family: 'Righteous';
+    font-size: 44px;
+    color: #ffffff;
+}
+
+.slogan {
+    color: #ffffff;
+    size: 18px;
+}
+
+.conteudo-pagina{
+    margin: 120px 0 120px 0;
+    background-color: #e5e5e5;
+    position: relative;
+}
+
+.bloco-opcoes{
+    margin-bottom: 27px;
+    width: auto;
+}
+
+.comando-bloco{
+    font-family: 'Righteous';
+    font-size: 26px;
+    color: #333333;
+    margin-left: 20px;
+}
+
+.container-opcoes{
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+}
+
+.opcao {
+    background: #ffffff;
+    border-radius: 9px;
+    height: 216px;
+    width: 172px;
+    margin: 17px 0px 0px 17px;
+    padding: 18px 14px 13px 14px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.certinho {
+    display: none;
+    font-size: 16px;
+    color: #32b72f;
+    position: absolute;
+    right: 14px;
+    bottom: 13px;
+}
+
+.opcao img{
+    height: 87px;
+    width: 144px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    align-self: center;
+}
+
+.nome-opcao{
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.descricao{
+    font-size: 15px;
+    color: #A6a6a6;
+    margin-bottom: 9px;
+}
+
+.preco{
+    font-size: 16px;
+}
+
+.bottom-box{
+    background: #ffffff;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.botao-final{
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #cbcbcb;
+    height: 61px;
+    width: 364px;
+    border-radius: 50px;
+    border: 0px;
+    padding: 0px 70px;
+    text-align: center;
+}
+
+.nao-selecionado{
+    display: initial;
+}
+
+.selecionado{
+    display: none;
+}
+
+
+.finalizacao-pedido{
+    display: none;
+    opacity: 1;
+    position: fixed;
+    width: 377px;
+    height: 353px;
+    z-index: 2;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    left: calc((100vw - 377px)/2);
+    top: calc((100vh - 353px)/2);
+    padding: 21px 25px 0px 25px;
+    align-items: center;
+    flex-direction: column;
+   justify-content: space-between;
+}
+
+.titulo-confirmacao{
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 28px;
+}
+
+.bloco-pedido{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 24px;
+}
+
+.nomes{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nomes p{
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 13px;
+}
+
+.precos{
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.precos p{
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 13px;
+    text-align: right;
+}
+
+.botao-confirma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 333px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    margin: 24px 24px 0px 24px;
+    border: none;
+}
+
+.botao-confirma a{
+    font-weight: bold;
+    font-size: 22px;
+    color: #50D074;
+    text-decoration: none;
+}
+
+.botao-cancelar{
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #50D074;
+    border: none;
+    width: 333px;
+    height: 52px
+}
+
+.conteudo-travado {
+    overflow: hidden;
+}
