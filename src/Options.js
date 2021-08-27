@@ -123,14 +123,14 @@ const Options = ({category, slogan, key}) => {
 
     return(
         <>
-            <p className="comando-bloco">{slogan}</p>
-            <div className = "container-opcoes">
+            <p className="containers-message">{slogan}</p>
+            <div className = "options-container">
                 {category.map((element, index) =>(
-                        <button className="opcao" key = {key+index}>
+                        <button className="option" key = {key+index}>
                             <img src={element.img}/>
-                            <p className="nome-opcao">{element.name}</p>
-                            <p className="descricao">{element.description}</p>
-                            <p className="preco">{`R$ ${element.price.toFixed(2).toString().replace(".", ",")}`}</p>
+                            <p className="options-name">{element.name}</p>
+                            <p className="description">{element.description}</p>
+                            <p className="price">{`R$ ${element.price.toFixed(2).toString().replace(".", ",")}`}</p>
                         </button>
                     ))
                 }
