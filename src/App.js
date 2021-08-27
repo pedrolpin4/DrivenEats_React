@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import PageContent from "./PageContent";
 import TopBox from "./TopBox";
 
-export default function App (){
+const App = () => {
     return(
         <>
             <TopBox restaurantsName = "FoodCamp" slogan = "Sua comida em 6 minutos"/>
@@ -11,3 +11,5 @@ export default function App (){
         </>
     )
 }
+
+export default App

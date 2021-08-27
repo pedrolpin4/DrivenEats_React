@@ -1,10 +1,12 @@
-export default function Footer (props){
+const Footer = ({numberOfItems}) => {
     return(
         <div className = "bottom-box">
         <button className = "final-button">
-            <p>Selecione os {props.numberOfItems} itens
+            <p>Selecione os {numberOfItems} itens
             para fechar o pedido</p>
         </button>
     </div>
     )
 }
+
+export default Footer

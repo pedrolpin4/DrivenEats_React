@@ -1,6 +1,6 @@
 import Options from "./Options"
 
-export default function PageContent (){
+const PageContent = () => {
     return(
         <div className = "options-block">
             <Options category = "foods" slogan = "Primeiro, seu prato" type = "f"/>
@@ -9,3 +9,5 @@ export default function PageContent (){
         </div>
     ) 
 }
+
+export default PageContent

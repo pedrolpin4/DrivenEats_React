@@ -1,6 +1,6 @@
-import desserts from "./Desserts";
-import drinks from "./Drinks";
-import meals from "./Meals";
+import desserts from "./menu/Desserts";
+import drinks from "./menu/Drinks";
+import meals from "./menu/Meals";
 
 const Options = ({category, slogan, type}) => {
     
