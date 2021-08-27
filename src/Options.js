@@ -113,7 +113,7 @@ const desserts = [{
 }]
 
 
-const Options = ({category, slogan, key}) => {
+const Options = ({category, slogan, type}) => {
     
     if(category === "foods"){
         category = [...meals];
@@ -126,8 +126,8 @@ const Options = ({category, slogan, key}) => {
             <p className="containers-message">{slogan}</p>
             <div className = "options-container">
                 {category.map((element, index) =>(
-                        <button className="option" key = {key+index}>
-                            <img src={element.img}/>
+                        <button className="option" key = {type+index}>
+                            <img src={element.img} alt = ""/>
                             <p className="options-name">{element.name}</p>
                             <p className="description">{element.description}</p>
                             <p className="price">{`R$ ${element.price.toFixed(2).toString().replace(".", ",")}`}</p>
