@@ -5,7 +5,7 @@ import TopBox from "./TopBox";
 export default function App (){
     return(
         <>
-            <TopBox restaurantsName = "DrivenEats" slogan = "Sua comida em 6 minutos"/>
+            <TopBox restaurantsName = "FoodCamp" slogan = "Sua comida em 6 minutos"/>
             <PageContent />
             <Footer numberOfItems = "3" />
         </>

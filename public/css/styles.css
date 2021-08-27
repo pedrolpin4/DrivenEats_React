@@ -39,14 +39,10 @@ body{
     size: 18px;
 }
 
-.conteudo-pagina{
+.bloco-opcoes{
     margin: 120px 0 120px 0;
     background-color: #e5e5e5;
     position: relative;
-}
-
-.bloco-opcoes{
-    margin-bottom: 27px;
     width: auto;
 }
 
@@ -54,7 +50,7 @@ body{
     font-family: 'Righteous';
     font-size: 26px;
     color: #333333;
-    margin-left: 20px;
+    margin: 27px 0px 0px 20px;
 }
 
 .container-opcoes{
