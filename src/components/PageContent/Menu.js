@@ -1,8 +1,9 @@
-import desserts from "./menu/Desserts";
-import drinks from "./menu/Drinks";
-import meals from "./menu/Meals";
+import desserts from "../../menu data/Desserts";
+import drinks from "../../menu data/Drinks";
+import meals from "../../menu data/Meals";
 
-const Options = ({category, slogan, type}) => {
+
+const Menu = ({category, slogan, type}) => {
     
     if(category === "foods"){
         category = [...meals];
@@ -15,11 +16,13 @@ const Options = ({category, slogan, type}) => {
             <p className="containers-message">{slogan}</p>
             <div className = "options-container">
                 {category.map((element, index) =>(
-                        <button className="option" key = {type+index}>
+                        <button className = "option"  key = {type+index}>
                             <img src={element.img} alt = ""/>
                             <p className="options-name">{element.name}</p>
                             <p className="description">{element.description}</p>
-                            <p className="price">{`R$ ${element.price.toFixed(2).toString().replace(".", ",")}`}</p>
+                            <div className="price">
+                                <p>{`R$ ${element.price.toFixed(2).toString().replace(".", ",")}`}</p>
+                            </div>
                         </button>
                     ))
                 }
@@ -28,4 +31,4 @@ const Options = ({category, slogan, type}) => {
     )
 }
 
-export default Options
+export default Menu

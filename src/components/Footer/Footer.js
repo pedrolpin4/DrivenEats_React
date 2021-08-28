@@ -1,3 +1,5 @@
+import "./Footer.css"
+
 const Footer = ({numberOfItems}) => {
     return(
         <div className = "bottom-box">

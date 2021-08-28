@@ -1,0 +1,23 @@
+.bottom-box{
+    background: #ffffff;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.final-button{
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #cbcbcb;
+    height: 61px;
+    width: 364px;
+    border-radius: 50px;
+    border: 0px;
+    padding: 0px 70px;
+    text-align: center;
+}

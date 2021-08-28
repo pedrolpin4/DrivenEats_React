@@ -1,44 +1,3 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    background: #e5e5e5;
-    width: 100vw;
-}
-
-*{
-    box-sizing: border-box;
-}
-
-.negrito{
-    font-weight: bold;
-}
-
-.top-box{
-    height: 92px;
-    width: 100vw;
-    background-color: #CF2B2B;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.restaurants-name {
-    font-family: 'Righteous';
-    font-size: 44px;
-    color: #ffffff;
-}
-
-.slogan {
-    color: #ffffff;
-    size: 18px;
-}
-
 .options-block{
     margin: 120px 0 120px 0;
     background-color: #e5e5e5;
@@ -74,7 +33,14 @@ body{
     position: relative;
     box-sizing: border-box;
     text-align: left;
+}
+
+.not-selected{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.selected {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 
 .option img{
@@ -100,28 +66,7 @@ body{
 
 .price{
     font-size: 16px;
-}
-
-.bottom-box{
-    background: #ffffff;
-    height: 92px;
+    width: 144px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-}
-
-.final-button{
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #cbcbcb;
-    height: 61px;
-    width: 364px;
-    border-radius: 50px;
-    border: 0px;
-    padding: 0px 70px;
-    text-align: center;
+    justify-content: space-between;
 }

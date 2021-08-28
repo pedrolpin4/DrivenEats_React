@@ -1,3 +1,4 @@
+import "./TopBox.css"
 
 const TopBox = ({slogan, restaurantsName}) => {
     return(
