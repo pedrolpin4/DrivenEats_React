@@ -35,7 +35,8 @@ const Menu = ({category, slogan, type}) => {
         if(measure === 1){
             setMeasure(0);
             setCounterClass("hidden");
-            setOptionsClass("not-selected");            
+            setOptionsClass("not-selected");
+            category.isSelected = false            
         } else setMeasure(measure - 1)
     }
 
