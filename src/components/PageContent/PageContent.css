@@ -70,3 +70,12 @@
     display: flex;
     justify-content: space-between;
 }
+.minus{
+    color: red;
+    margin-left: 5px;
+}
+
+.plus{
+    color: green;
+    margin-right: 5px;  
+}
