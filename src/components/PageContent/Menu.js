@@ -19,7 +19,7 @@ const Menu = ({category, slogan, type}) => {
 
     
     const show = (measure) => {
-        if(category.isSelected === false){
+        if(measure === 0){
             setMeasure(1);
             category.isSelected = true;
             setCounterClass("default");
@@ -35,7 +35,6 @@ const Menu = ({category, slogan, type}) => {
         if(measure === 1){
             setMeasure(0);
             setCounterClass("hidden");
-            category.isSelected = false;
             setOptionsClass("not-selected");            
         } else setMeasure(measure - 1)
     }

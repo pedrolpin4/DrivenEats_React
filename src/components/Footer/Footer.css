@@ -13,11 +13,18 @@
 .final-button{
     font-size: 20px;
     color: #ffffff;
-    background-color: #cbcbcb;
     height: 61px;
     width: 364px;
     border-radius: 50px;
     border: 0px;
     padding: 0px 70px;
     text-align: center;
+}
+
+.ready{
+    background: #32B72F;
+}
+
+.not-ready{
+    background: #cbcbcb;
 }
