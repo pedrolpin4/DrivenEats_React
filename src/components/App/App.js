@@ -8,7 +8,7 @@ const App = () => {
         <>
             <TopBox restaurantsName = "FoodCamp" slogan = "Sua comida em 6 minutos"/>
             <PageContent />
-            <Footer numberOfItems = "3" />
+            <Footer numberOfItems = "3"/>
         </>
     )
 }

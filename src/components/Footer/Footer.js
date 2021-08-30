@@ -9,6 +9,7 @@ import { useState } from "react"
 const Footer = ({numberOfItems}) => {
     const[text, setText] = useState(`Selecione os ${numberOfItems} itens para fechar o pedido`);
     const [messageClass, setMessageClass] = useState("not-ready")
+
     const verifyOrder = () => {
         if(drinks.isSelected && desserts.isSelected && meals.isSelected){
             setMessageClass("ready");
