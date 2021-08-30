@@ -15,7 +15,7 @@ const Menu = ({category, slogan, type}) => {
         category.order = [];
         category.data.forEach(element => {
             if(element.isSelected){
-                category.order.push({name: element.name, quantity: element.qty})
+                category.order.push({name: element.name, quantity: element.qty, price: element.price})
             }
         });
         if(category.order.length === 0){

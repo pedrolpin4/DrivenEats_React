@@ -20,11 +20,36 @@ const Footer = ({numberOfItems}) => {
         }
     }
 
+    const takeTheOrder = () => {
+        const totalPrice = 0;
+
+        const mapTheOrder = (array) => {
+            array.order.map(element => {
+                totalPrice += element.price;
+                return `${element.name} (${element.qty}x), `
+            })
+        }
+
+        const food = `Pratos: ${mapTheOrder(meals)}`;
+        const beverage = `Bebidas: ${mapTheOrder(drinks)}`;
+        const candys = `Sobremesas: ${mapTheOrder(desserts)}`;
+        
+        return `Olá, gostaria de fazer um pedido:
+        - ${food}
+        - ${beverage}
+        - ${candys}
+        Total: R$ ${totalPrice.toFixed(2)}`
+    }
+
+    const goToWpp = () =>{
+        return `https://wa.me/+5521967431453text=${encodeURIComponent(takeTheOrder)}`
+    }
+
     setInterval(verifyOrder, 100);
 
     return(
         <div className = "bottom-box">
-        <button className = {`final-button ${messageClass}`}>
+        <button className = {`final-button ${messageClass}`} onClick = {goToWpp}>
             <p>{text}</p>
         </button>
     </div>
