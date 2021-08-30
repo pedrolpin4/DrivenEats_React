@@ -11,6 +11,18 @@ const Menu = ({category, slogan, type}) => {
         category = drinks
     } else category = desserts
 
+    const verifySelection = () =>{
+        category.order = [];
+        category.data.forEach(element => {
+            if(element.isSelected){
+                category.order.push({name: element.name, quantity: element.qty})
+            }
+        });
+        if(category.order.length === 0){
+            category.isSelected = false
+        } else category.isSelected = true
+    }
+
     return(
     <>
         <p className="containers-message">{slogan}</p>
@@ -21,6 +33,7 @@ const Menu = ({category, slogan, type}) => {
                     type = {type} 
                     index = {index} 
                     category = {category}
+                    verifySelection = {verifySelection}
                   />
                 ))
             }

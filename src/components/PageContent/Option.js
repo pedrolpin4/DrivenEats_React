@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const Option = ({element, index, type, category}) =>{     
+const Option = ({element, index, type, verifySelection}) =>{     
     const [counter, setCounter] = useState(0);
     const [counterClass, setCounterClass] = useState("hidden");
     const [optionsClass, setOptionsClass] = useState("not-selected");
@@ -11,11 +11,14 @@ const Option = ({element, index, type, category}) =>{
             element.isSelected = true;
             setCounterClass("default");
             setOptionsClass("selected");
+            verifySelection();
         }
     }
 
     const increase = (counter) => {
         setCounter(counter + 1)
+        element.qty = counter
+        verifySelection();
     }
 
     const decrease = (counter) => {
@@ -23,9 +26,13 @@ const Option = ({element, index, type, category}) =>{
             setCounter(0);
             setCounterClass("hidden");
             setOptionsClass("not-selected");
-            element.isSelected = false;            
+            element.isSelected = false;
+            console.log(element.isSelected);
+            verifySelection();            
         } else{
-            setCounter(counter - 1)
+            setCounter(counter - 1);
+            element.qty = counter;
+            verifySelection();
         } 
     }
 
