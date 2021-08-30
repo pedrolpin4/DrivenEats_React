@@ -38,7 +38,7 @@ const Footer = ({numberOfItems}) => {
         })
     }
 
-    setInterval(verifyOrder, 10)
+    setInterval(verifyOrder, 11)
 
     const takeTheOrder = () => {
         if(drinks.isSelected && desserts.isSelected && meals.isSelected){
