@@ -8,7 +8,9 @@ import { useState } from "react"
 
 const Footer = ({numberOfItems}) => {
     const[text, setText] = useState(`Selecione os ${numberOfItems} itens para fechar o pedido`);
-    const [messageClass, setMessageClass] = useState("not-ready")
+    const [messageClass, setMessageClass] = useState("not-ready");
+    const message = "";
+    const link = "";
 
     const verifyOrder = () => {
         if(drinks.isSelected && desserts.isSelected && meals.isSelected){
@@ -25,7 +27,7 @@ const Footer = ({numberOfItems}) => {
 
         const mapTheOrder = (array) => {
             array.order.map(element => {
-                totalPrice += element.price;
+               // totalPrice += element.price;
                 return `${element.name} (${element.qty}x), `
             })
         }
@@ -34,25 +36,25 @@ const Footer = ({numberOfItems}) => {
         const beverage = `Bebidas: ${mapTheOrder(drinks)}`;
         const candys = `Sobremesas: ${mapTheOrder(desserts)}`;
         
-        return `Olá, gostaria de fazer um pedido:
+        message = `Olá, gostaria de fazer um pedido:
         - ${food}
         - ${beverage}
         - ${candys}
         Total: R$ ${totalPrice.toFixed(2)}`
-    }
 
-    const goToWpp = () =>{
-        return `https://wa.me/+5521967431453text=${encodeURIComponent(takeTheOrder)}`
+        link = `https://wa.me/5521967431453?text` + encodeURIComponent(message)
+        
+        window.open(link, "_blank")
     }
 
     setInterval(verifyOrder, 100);
 
     return(
         <div className = "bottom-box">
-        <button className = {`final-button ${messageClass}`} onClick = {goToWpp}>
-            <p>{text}</p>
-        </button>
-    </div>
+            <button className = {`final-button ${messageClass}`} onClick = {takeTheOrder}>
+                <p>{text}</p>
+            </button>
+        </div>
     )
 }
 
