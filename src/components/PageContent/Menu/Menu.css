@@ -1,0 +1,12 @@
+.containers-message{
+    font-family: 'Righteous';
+    font-size: 26px;
+    color: #333333;
+    margin: 27px 0px 0px 20px;
+}
+
+.options-container{
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+}

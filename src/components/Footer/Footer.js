@@ -9,8 +9,12 @@ import { useState } from "react"
 const Footer = ({numberOfItems}) => {
     const[text, setText] = useState(`Selecione os ${numberOfItems} itens para fechar o pedido`);
     const [messageClass, setMessageClass] = useState("not-ready");
-    const message = "";
-    const link = "";
+    let message = "";
+    let link = "";
+    let totalPrice = 0;
+    let food = `Pratos: `;
+    let beverage = `Bebidas: `;
+    let candys = `Sobremesas: `;
 
     const verifyOrder = () => {
         if(drinks.isSelected && desserts.isSelected && meals.isSelected){
@@ -22,27 +26,34 @@ const Footer = ({numberOfItems}) => {
         }
     }
 
+    const iterate = (array) => {
+        array.order.forEach(element => {
+            totalPrice += element.price;
+            const item = `${element.name} (${element.quantity}x), `;
+            switch(array){
+                case meals: food += item; break;
+                case drinks: beverage += item; break;
+                case desserts: candys += item
+            }
+        })
+    }
+
+
     const takeTheOrder = () => {
-        const totalPrice = 0;
+       iterate(meals);
+       iterate(drinks);
+       iterate(desserts)
 
-        const mapTheOrder = (array) => {
-            array.order.map(element => {
-               // totalPrice += element.price;
-                return `${element.name} (${element.qty}x), `
-            })
-        }
+        message = 
+`Olá, gostaria de fazer um pedido:
+    - ${food}
+    - ${beverage}
+    - ${candys}
+Total: R$ ${totalPrice.toFixed(2).toString().replace(".", ",")}`
 
-        const food = `Pratos: ${mapTheOrder(meals)}`;
-        const beverage = `Bebidas: ${mapTheOrder(drinks)}`;
-        const candys = `Sobremesas: ${mapTheOrder(desserts)}`;
-        
-        message = `Olá, gostaria de fazer um pedido:
-        - ${food}
-        - ${beverage}
-        - ${candys}
-        Total: R$ ${totalPrice.toFixed(2)}`
+        //the message content isn't idented 'cause of its whatsApp format, wich needs to have no spacing between the line breaks and their texts
 
-        link = `https://wa.me/5521967431453?text` + encodeURIComponent(message)
+        link = `https://wa.me/5521967431453?text=` + encodeURIComponent(message)
         
         window.open(link, "_blank")
     }
