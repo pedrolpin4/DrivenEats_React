@@ -38,6 +38,7 @@ const Footer = ({numberOfItems}) => {
         })
     }
 
+    setInterval(verifyOrder, 10)
 
     const takeTheOrder = () => {
        iterate(meals);
@@ -57,8 +58,6 @@ Total: R$ ${totalPrice.toFixed(2).toString().replace(".", ",")}`
         
         window.open(link, "_blank")
     }
-
-    setInterval(verifyOrder, 100);
 
     return(
         <div className = "bottom-box">
