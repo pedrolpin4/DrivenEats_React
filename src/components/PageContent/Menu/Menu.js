@@ -29,6 +29,7 @@ const Menu = ({category, slogan, type}) => {
         <div className = "options-container">
             {category.data.map((element, index) =>(
                   <Option 
+                    key = {category+index}
                     element = {element} 
                     type = {type} 
                     index = {index} 

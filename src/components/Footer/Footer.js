@@ -33,7 +33,8 @@ const Footer = ({numberOfItems}) => {
             switch(array){
                 case meals: food += item; break;
                 case drinks: beverage += item; break;
-                case desserts: candys += item
+                case desserts: candys += item; break;
+                default: break;
             }
         })
     }
