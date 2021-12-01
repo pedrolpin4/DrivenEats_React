@@ -12,7 +12,7 @@ const meals = {
     {
         name: "Pizza de folha",
         description: "Perfeito para quem é herbívoro",
-        img: "https://www.ocladapizza.com.br/wp-content/uploads/2016/07/Blog-Histo%CC%81ria-da-Pizza-Marguerita-660x420.jpg",
+        img: "https://pizzariadesucesso.com/wp-content/uploads/2018/11/images-4-2.jpeg",
         price: 32,
         isSelected: false,
         quantity: 0
