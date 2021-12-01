@@ -54,7 +54,7 @@ const OptionsContainer = styled.div`
     width: auto;
     height: 300px;
     overflow-x: scroll;
-    overflow-y: visible;
+    overflow-y: hidden;
 `
 
 export default Menu
