@@ -116,6 +116,9 @@ const FrontSide = styled.div`
             color: #fff;
         }
 
+        div:last-child{
+            transform: translateY(0px);
+        }
     }
 `
 
@@ -129,6 +132,7 @@ const SeeMore = styled.div`
     margin-bottom: 20px;
     border-radius: 20px;
     background-color: #770000;
+    transform: translateY(50px);
     color: #fff;
     align-self: center;
     transition: all .4s;
@@ -157,7 +161,7 @@ const SeeMore = styled.div`
     }
     
     &:active{
-        transform: translateY(-0.1rem);
+        transform: translateY(-1px);
         box-shadow: 0 0.5rem 1rem rgba(0,0,0, .2);
     }
 `
