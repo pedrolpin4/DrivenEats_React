@@ -75,7 +75,6 @@ const Product = styled.div`
     position: relative;
     height: 250px;
     width: 195px;
-    overflow: hidden;
     background-color: transparent;
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -103,7 +102,7 @@ const FrontSide = styled.div`
     justify-content: space-between;
     border: 0px;
     text-align: left;
-    overflow-x: hidden;
+    overflow: hidden;
     transform: scale(1) ${props => props.rotated ? "rotateY(-180deg)" : ""};
     transition: transform .5s;
     box-shadow: ${props => props.optionsClass === 'selected' ? "0px 0px 0px 3px #32FA2F" : "0px 1.7px 1.7px .5px rgba(255, 0, 0, 0.25)"};
