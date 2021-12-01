@@ -1,8 +1,8 @@
-import desserts from "../../../menu data/Desserts";
-import drinks from "../../../menu data/Drinks";
-import meals from "../../../menu data/Meals";
-import "./Menu.css"
-import Option from "../Option/Option";
+import desserts from "../menu data/Desserts";
+import drinks from "../menu data/Drinks";
+import meals from "../menu data/Meals";
+import Option from "./Option";
+import styled from "styled-components";
 
 const Menu = ({category, slogan, type}) => {
     if(category === "foods"){
@@ -25,8 +25,8 @@ const Menu = ({category, slogan, type}) => {
 
     return(
     <>
-        <p className="containers-message">{slogan}</p>
-        <div className = "options-container">
+        <ContainerMessage>{slogan}</ContainerMessage>
+        <OptionsContainer>
             {category.data.map((element, index) =>(
                   <Option 
                     key = {category+index}
@@ -38,9 +38,23 @@ const Menu = ({category, slogan, type}) => {
                   />
                 ))
             }
-        </div>
+        </OptionsContainer>
     </>
     )
 }
+
+const ContainerMessage = styled.h2`
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    margin: 35px 0px 10px 20px;
+`
+const OptionsContainer = styled.div`
+    display: flex;
+    width: auto;
+    height: 300px;
+    overflow-x: scroll;
+    overflow-y: visible;
+`
 
 export default Menu
