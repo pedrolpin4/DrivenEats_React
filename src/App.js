@@ -6,7 +6,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 const App = () => (
         <>
             <GlobalStyles />
-            <TopBox restaurantsName = "FoodCamp" slogan = "Sua comida em 6 minutos"/>
+            <TopBox restaurantsName = "BigTrash" slogan = "All your trash food in one place"/>
             <PageContent />
             <Footer numberOfItems = "3"/>
         </>
