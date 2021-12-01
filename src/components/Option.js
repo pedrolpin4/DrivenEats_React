@@ -75,6 +75,7 @@ const Product = styled.div`
     position: relative;
     height: 250px;
     width: 195px;
+    overflow: hidden;
     background-color: transparent;
     perspective: 150rem;
     -moz-perspective: 150rem;
