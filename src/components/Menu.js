@@ -52,7 +52,7 @@ const ContainerMessage = styled.h2`
 const OptionsContainer = styled.div`
     display: flex;
     width: auto;
-    height: 300px;
+    height: 315px;
     overflow-x: scroll;
     overflow-y: hidden;
 `
